@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorREY | Sistema de Facturación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="pos-container">
+
+        <!-- PANEL IZQUIERDO -->
+        <section class="products-panel">
+
+            <header class="panel-header">
+                <div>
+                    <span class="eyebrow">RESTAURANTE DE CARNES & PARRILLAS</span>
+                    <h1>factor<span>REY</span></h1>
+                </div>
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Sistema activo
+                </div>
+            </header>
+
+            <div class="category">
+                <div class="category-title">
+                    <span>Cortes Premium</span>
+                </div>
+
+                <div class="products-grid">
+
+                    <article class="product-card">
+                        <div class="product-icon">🥩</div>
+                        <div class="product-info">
+                            <h3>Picaña</h3>
+                            <p>Corte premium</p>
+                            <strong>S/ 48.00</strong>
+                        </div>
+                        <button class="add-btn"
+                                onclick="addProduct('Picaña', 48.00)">
+                            Agregar
+                        </button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-icon">🔥</div>
+                        <div class="product-info">
+                            <h3>Tomahawk</h3>
+                            <p>Corte premium</p>
+                            <strong>S/ 95.00</strong>
+                        </div>
+                        <button class="add-btn"
+                                onclick="addProduct('Tomahawk', 95.00)">
+                            Agregar
+                        </button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-icon">🥩</div>
+                        <div class="product-info">
+                            <h3>Bife de cuadril</h3>
+                            <p>Corte premium</p>
+                            <strong>S/ 52.00</strong>
+                        </div>
+                        <button class="add-btn"
+                                onclick="addProduct('Bife de cuadril', 52.00)">
+                            Agregar
+                        </button>
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">
+                    <span>Parrillas Familiares</span>
+                </div>
+
+                <div class="products-grid">
+
+                    <article class="product-card">
+                        <div class="product-icon">🍖</div>
+                        <div class="product-info">
+                            <h3>Parrilla Familiar</h3>
+                            <p>Para 4 personas</p>
+                            <strong>S/ 145.00</strong>
+                        </div>
+                        <button class="add-btn"
+                                onclick="addProduct('Parrilla Familiar', 145.00)">
+                            Agregar
+                        </button>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-icon">🔥</div>
+                        <div class="product-info">
+                            <h3>Parrilla Rey</h3>
+                            <p>Especial de la casa</p>
+                            <strong>S/ 185.00</strong>
+                        </div>
+                        <button class="add-btn"
+                                onclick="addProduct('Parrilla Rey', 185.00)">
+                            Agregar
+                        </button>
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">
+                    <span>Bebidas</span>
+                </div>
+
+                <div class="products-grid">
+
+                    <article class="product-card compact">
+                        <div class="product-icon">🥤</div>
+                        <div class="product-info">
+                            <h3>Gaseosa 1.5 L</h3>
+                            <strong>S/ 10.00</strong>
+                        </div>
+                        <button class="add-btn"
+                                onclick="addProduct('Gaseosa 1.5 L', 10.00)">
+                            Agregar
+                        </button>
+                    </article>
+
+                    <article class="product-card compact">
+                        <div class="product-icon">💧</div>
+                        <div class="product-info">
+                            <h3>Agua mineral</h3>
+                            <strong>S/ 5.00</strong>
+                        </div>
+                        <button class="add-btn"
+                                onclick="addProduct('Agua mineral', 5.00)">
+                            Agregar
+                        </button>
+                    </article>
+
+                    <article class="product-card compact">
+                        <div class="product-icon">🍹</div>
+                        <div class="product-info">
+                            <h3>Limonada</h3>
+                            <strong>S/ 8.00</strong>
+                        </div>
+                        <button class="add-btn"
+                                onclick="addProduct('Limonada', 8.00)">
+                            Agregar
+                        </button>
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">
+                    <span>Guarniciones</span>
+                </div>
+
+                <div class="products-grid">
+
+                    <article class="product-card compact">
+                        <div class="product-icon">🍟</div>
+                        <div class="product-info">
+                            <h3>Papas fritas</h3>
+                            <strong>S/ 12.00</strong>
+                        </div>
+                        <button class="add-btn"
+                                onclick="addProduct('Papas fritas', 12.00)">
+                            Agregar
+                        </button>
+                    </article>
+
+                    <article class="product-card compact">
+                        <div class="product-icon">🥗</div>
+                        <div class="product-info">
+                            <h3>Ensalada</h3>
+                            <strong>S/ 12.00</strong>
+                        </div>
+                        <button class="add-btn"
+                                onclick="addProduct('Ensalada', 12.00)">
+                            Agregar
+                        </button>
+                    </article>
+
+                    <article class="product-card compact">
+                        <div class="product-icon">🌽</div>
+                        <div class="product-info">
+                            <h3>Choclo con queso</h3>
+                            <strong>S/ 14.00</strong>
+                        </div>
+                        <button class="add-btn"
+                                onclick="addProduct('Choclo con queso', 14.00)">
+                            Agregar
+                        </button>
+                    </article>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- PANEL DERECHO -->
+        <aside class="invoice-panel">
+
+            <div class="invoice-header">
+                <div>
+                    <span class="eyebrow">NUEVO COMPROBANTE</span>
+                    <h2>Detalle de venta</h2>
+                </div>
+
+                <div class="invoice-number">
+                    <span>Serie</span>
+                    <strong>B001</strong>
+                </div>
+            </div>
+
+            <!-- DETALLE DE PRODUCTOS -->
+            <section class="order-section">
+
+                <div class="section-heading">
+                    <h3>Productos</h3>
+                    <span id="itemCount">0 productos</span>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="order-table">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cant.</th>
+                                <th>P. Unit.</th>
+                                <th>Subtotal</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="orderBody">
+                            <tr class="empty-row">
+                                <td colspan="5">
+                                    <div class="empty-cart">
+                                        <span>🛒</span>
+                                        <p>No hay productos agregados</p>
+                                        <small>Selecciona productos del menú</small>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+            <!-- RESUMEN -->
+            <section class="summary-box">
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="subtotal">S/ 0.00</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>IGV <small>18%</small></span>
+                    <strong id="igv">S/ 0.00</strong>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total General</span>
+                    <strong id="total">S/ 0.00</strong>
+                </div>
+
+            </section>
+
+            <!-- DATOS DEL CLIENTE -->
+            <section class="billing-section">
+
+                <div class="section-heading">
+                    <h3>Datos de facturación</h3>
+                    <span class="required-label">* Campos obligatorios</span>
+                </div>
+
+                <form id="billingForm" onsubmit="emitDocument(event)">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="documentType">
+                                Tipo de comprobante <span>*</span>
+                            </label>
+
+                            <select id="documentType"
+                                    name="documentType"
+                                    onchange="updateDocumentField()"
+                                    required>
+                                <option value="factura">Factura</option>
+                                <option value="boleta">Boleta</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="documentNumber">
+                                <span id="documentLabel">RUC</span> <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="documentNumber"
+                                name="documentNumber"
+                                inputmode="numeric"
+                                maxlength="11"
+                                placeholder="Ingrese RUC"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerName">
+                            <span id="customerNameLabel">Razón Social</span> <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            name="customerName"
+                            placeholder="Ingrese razón social del cliente"
+                            required
+                        >
+                    </div>
+
+                    <div id="message" class="message"></div>
+
+                    <button type="submit" class="emit-btn">
+                        <span>⚡</span>
+                        Emitir Factura Electrónica
+                    </button>
+
+                </form>
+
+            </section>
+
+            <footer class="invoice-footer">
+                <span>factorREY</span>
+                <span>•</span>
+                <span>Sistema de Facturación</span>
+                <span>•</span>
+                <span>IGV 18%</span>
+            </footer>
+
+        </aside>
+
+    </main>
+
+    <script>
+        const cart = [];
+
+        function addProduct(name, price) {
+            const existingProduct = cart.find(product => product.name === name);
+
+            if (existingProduct) {
+                existingProduct.quantity++;
+            } else {
+                cart.push({
+                    name: name,
+                    price: price,
+                    quantity: 1
+                });
+            }
+
+            renderCart();
+        }
+
+        function decreaseProduct(index) {
+            if (cart[index].quantity > 1) {
+                cart[index].quantity--;
+            } else {
+                cart.splice(index, 1);
+            }
+
+            renderCart();
+        }
+
+        function increaseProduct(index) {
+            cart[index].quantity++;
+            renderCart();
+        }
+
+        function removeProduct(index) {
+            cart.splice(index, 1);
+            renderCart();
+        }
+
+        function renderCart() {
+            const orderBody = document.getElementById("orderBody");
+            const itemCount = document.getElementById("itemCount");
+
+            if (cart.length === 0) {
+                orderBody.innerHTML = `
+                    <tr class="empty-row">
+                        <td colspan="5">
+                            <div class="empty-cart">
+                                <span>🛒</span>
+                                <p>No hay productos agregados</p>
+                                <small>Selecciona productos del menú</small>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+
+                itemCount.textContent = "0 productos";
+                updateTotals();
+                return;
+            }
+
+            let totalItems = 0;
+
+            orderBody.innerHTML = cart.map((product, index) => {
+                const subtotal = product.price * product.quantity;
+                totalItems += product.quantity;
+
+                return `
+                    <tr>
+                        <td>
+                            <div class="table-product">
+                                <span class="table-product-icon">🥩</span>
+                                <span>${product.name}</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="quantity-control">
+                                <button type="button"
+                                        onclick="decreaseProduct(${index})">−</button>
+
+                                <span>${product.quantity}</span>
+
+                                <button type="button"
+                                        onclick="increaseProduct(${index})">+</button>
+                            </div>
+                        </td>
+
+                        <td>S/ ${product.price.toFixed(2)}</td>
+
+                        <td>
+                            <strong>S/ ${subtotal.toFixed(2)}</strong>
+                        </td>
+
+                        <td>
+                            <button
+                                type="button"
+                                class="delete-btn"
+                                onclick="removeProduct(${index})"
+                                title="Eliminar producto">
+                                ×
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            }).join("");
+
+            itemCount.textContent =
+                `${totalItems} ${totalItems === 1 ? "producto" : "productos"}`;
+
+            updateTotals();
+        }
+
+        function updateTotals() {
+            const totalWithIgv = cart.reduce(
+                (sum, product) => sum + (product.price * product.quantity),
+                0
+            );
+
+            const subtotal = totalWithIgv / 1.18;
+            const igv = totalWithIgv - subtotal;
+
+            document.getElementById("subtotal").textContent =
+                `S/ ${subtotal.toFixed(2)}`;
+
+            document.getElementById("igv").textContent =
+                `S/ ${igv.toFixed(2)}`;
+
+            document.getElementById("total").textContent =
+                `S/ ${totalWithIgv.toFixed(2)}`;
+        }
+
+        function updateDocumentField() {
+            const type = document.getElementById("documentType").value;
+
+            const documentLabel =
+                document.getElementById("documentLabel");
+
+            const documentNumber =
+                document.getElementById("documentNumber");
+
+            const customerNameLabel =
+                document.getElementById("customerNameLabel");
+
+            const customerName =
+                document.getElementById("customerName");
+
+            if (type === "factura") {
+                documentLabel.textContent = "RUC";
+                documentNumber.placeholder = "Ingrese RUC";
+                documentNumber.maxLength = 11;
+
+                customerNameLabel.textContent = "Razón Social";
+                customerName.placeholder =
+                    "Ingrese razón social del cliente";
+            } else {
+                documentLabel.textContent = "DNI";
+                documentNumber.placeholder = "Ingrese DNI";
+                documentNumber.maxLength = 8;
+
+                customerNameLabel.textContent = "Nombre del Cliente";
+                customerName.placeholder =
+                    "Ingrese nombre completo del cliente";
+            }
+
+            documentNumber.value = "";
+            customerName.value = "";
+        }
+
+        document.getElementById("documentNumber")
+            .addEventListener("input", function () {
+                this.value = this.value.replace(/\D/g, "");
+            });
+
+        function emitDocument(event) {
+            event.preventDefault();
+
+            const message = document.getElementById("message");
+            const type = document.getElementById("documentType").value;
+            const documentNumber =
+                document.getElementById("documentNumber").value.trim();
+
+            const customerName =
+                document.getElementById("customerName").value.trim();
+
+            if (cart.length === 0) {
+                showMessage(
+                    "Agrega al menos un producto antes de emitir el comprobante.",
+                    "error"
+                );
+                return;
+            }
+
+            if (type === "factura" && documentNumber.length !== 11) {
+                showMessage(
+                    "El RUC debe contener 11 dígitos.",
+                    "error"
+                );
+                return;
+            }
+
+            if (type === "boleta" && documentNumber.length !== 8) {
+                showMessage(
+                    "El DNI debe contener 8 dígitos.",
+                    "error"
+                );
+                return;
+            }
+
+            if (!customerName) {
+                showMessage(
+                    "Ingresa los datos del cliente.",
+                    "error"
+                );
+                return;
+            }
+
+            const button = document.querySelector(".emit-btn");
+
+            button.disabled = true;
+            button.innerHTML = `
+                <span class="loading"></span>
+                Procesando comprobante...
+            `;
+
+            setTimeout(() => {
+                showMessage(
+                    `Comprobante listo para emisión: ${type.toUpperCase()} - ${documentNumber}`,
+                    "success"
+                );
+
+                button.disabled = false;
+                button.innerHTML = `
+                    <span>⚡</span>
+                    Emitir Factura Electrónica
+                `;
+            }, 900);
+        }
+
+        function showMessage(text, type) {
+            const message = document.getElementById("message");
+
+            message.textContent = text;
+            message.className = `message ${type}`;
+
+            setTimeout(() => {
+                message.className = "message";
+                message.textContent = "";
+            }, 4500);
+        }
+
+        renderCart();
+    </script>
+
+</body>
+</html>
